@@ -2,8 +2,6 @@
 
 This is a Rust library for parsing and managing Windows Terminal configuration files. It provides comprehensive serde structs to serialize and deserialize the Windows Terminal `profiles.json` configuration file.
 
-[Windows Terminal Profiles Schema](https://aka.ms/terminal-profiles-schema)
-
 ## Installation
 
 Add the dependency to your `Cargo.toml`:
@@ -119,4 +117,5 @@ Issues and Pull Requests are welcome!
 ## Related Links
 
 - [Windows Terminal Official Documentation](https://docs.microsoft.com/en-us/windows/terminal/)
-- [Windows Terminal Configuration Documentation](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/overview)
+- [Windows Terminal Profiles Schema](https://aka.ms/terminal-profiles-schema)
+- [terminal-documentation](https://aka.ms/terminal-documentation)
