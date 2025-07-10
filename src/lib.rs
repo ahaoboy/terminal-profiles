@@ -804,6 +804,8 @@ pub enum ShortcutActionName {
 
 #[cfg(test)]
 mod test {
+    use serde_json::Value;
+
     use crate::WindowsTerminalSettings;
 
     #[test]
@@ -811,7 +813,8 @@ mod test {
         let s = include_str!("../assets/settings.json");
         let json: WindowsTerminalSettings = serde_json::from_str(s).unwrap();
         let s2 = serde_json::to_string(&json).unwrap();
-        let json2: WindowsTerminalSettings = serde_json::from_str(&s2).unwrap();
-        assert_eq!(json, json2);
+        let v1: Value = serde_json::from_str(s).unwrap();
+        let v2: Value = serde_json::from_str(&s2).unwrap();
+        assert_eq!(v1, v2);
     }
 }
