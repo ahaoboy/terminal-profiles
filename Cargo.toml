@@ -1,0 +1,13 @@
+[package]
+name = "terminal-profiles"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "terminal-profiles"
+repository = "https://github.com/ahaoboy/terminal-profiles"
+homepage = "https://github.com/ahaoboy/terminal-profiles"
+authors = ["ahaoboy"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1"
