@@ -6,9 +6,11 @@ fn main() {
         return;
     };
 
-    let s = std::fs::read_to_string(&path).unwrap_or_else(|_| panic!("failed to read file: {path}"));
+    let s =
+        std::fs::read_to_string(&path).unwrap_or_else(|_| panic!("failed to read file: {path}"));
 
     let json: WindowsTerminalSettings = serde_json::from_str(&s).expect("failed to serde");
 
-    println!("{json:#?}");
+    let s = serde_json::to_string_pretty(&json).unwrap();
+    println!("{s}")
 }
